@@ -24,7 +24,7 @@ ncrossovers=15;
 %ncrossovers=0;
 
 %number of simulations
-numsims=10;
+numsims=100;
 
 %Initializing Vectors of Values that need to be stored for results
 %Each vector has the same length as the number of iterations
@@ -387,7 +387,7 @@ xbetween=reshape(Mbetweenness_cent,[],1);
 xcloseness=reshape(Mcloseness_cent,[],1);
 xdegree=reshape(Mdegree_cent,[],1);
 xeigen=reshape(Meigen_cent,[],1);
-X=[ones(numsims*nagents,1),  xbetween, xcloseness, xdegree,xeigen];
+X=[ones(numsims*nagents,1), xbetween, xcloseness, xdegree,xeigen];
 
 if ncrossovers>0
     [all_b,all_bint]=regress(y,X);
